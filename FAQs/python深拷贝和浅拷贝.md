@@ -17,3 +17,26 @@
 浅拷贝不同，原对象的可变元素发生改变的同时，拷贝对象的元素也会发生改变。
 
 浅拷贝是藕断丝连，深拷贝是彻底离婚。
+
+```python {cmd="python"}
+import copy
+a = [1, 2, 3, [1, 3]]
+b = a
+c = copy.copy(a)
+d = copy.deepcopy(a)
+print(" id(a)=", id(a), "\n","id(b)=", id(b), "\n", "id(c)=", id(c), "\n", "id(d)=", id(d))
+
+print(" do some change")
+a[3].append(5)
+print(" a[3]:", a[3], "\n",
+      "b[3]:", b[3], "\n",
+      "c[3]:", c[3], "\n",
+      "d[3]:", d[3])
+
+print(" comfirm no change object")
+e = (1, [1, 2])
+f = e
+e[1][0] = 2
+print(" id(e)=", id(e), e, "\n",
+      "id(f)=", id(f), f, "\n")
+```
