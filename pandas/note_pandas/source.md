@@ -17,5 +17,5 @@
 
 
 
-[官网]:(https://pandas.pydata.org/pandas-docs/stable/index.html)
-[盖诺]:(https://www.gairuo.com/)
+[官网]:https://pandas.pydata.org/pandas-docs/stable/index.html
+[盖诺]:https://www.gairuo.com/
